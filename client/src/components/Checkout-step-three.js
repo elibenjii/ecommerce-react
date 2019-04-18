@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react'
-import CheckoutPaypalBtn from './Checkout-paypal-btn'
 import { 
   Badge, 
   Button, 
@@ -62,11 +61,6 @@ const CheckoutStepThree = ({
           </Col>
           <Col md="6">
           <h4>Payment: </h4>
-            <CheckoutPaypalBtn 
-              onSubmitOrder={onSubmitOrder} 
-              selectorTotalAmountCart={selectorTotalAmountCart}
-              totalDelivery={totalDelivery}
-              />
           </Col>
         </Row>
         </Collapse>
