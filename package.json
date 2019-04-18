@@ -1,5 +1,5 @@
 {
-  "name": "ecommerce react",
+  "name": "ecommerce-react",
   "engines": {
     "node": "v11.1.0",
     "yarn": "^1.12.3"
