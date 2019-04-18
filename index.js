@@ -7,13 +7,11 @@ const path = require('path');
 require('dotenv').config();
 require('./services/passport.js')
 const compression = require('compression')
-
-
-const { DB_URI, DB_URI_DEV } = process.env
+const config = require('../config.js');
 
 const env = process.env.NODE_ENV || 'development';
 
-mongoose.connect(env === 'development' ? 'mongodb://'+DB_URI_DEV : 'mongodb://'+DB_URI, {useNewUrlParser: true, useCreateIndex: true})
+mongoose.connect(env === 'development' ? config.DB_URI_DEV : config.DB_URI, {useNewUrlParser: true, useCreateIndex: true})
 
 const app = express()
 app.use(compression())
