@@ -21,6 +21,7 @@ Installing the modules & importing the products list DB:
 $ yarn
 $ cd client && yarn start
 import democollections.json
+setup your config.js file (secret JWT & Mongo URI)
 ```
 
 ## Features
