@@ -1,9 +1,5 @@
 {
   "name": "ecommerce-react",
-  "engines": {
-    "node": "v11.1.0",
-    "yarn": "^1.12.3"
-  },
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -15,21 +11,21 @@
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "dependencies": {
-    "bcrypt-nodejs": "^0.0.3",
-    "body-parser": "^1.18.3",
-    "compression": "^1.7.3",
-    "dotenv": "^6.1.0",
-    "express": "^4.16.3",
-    "jwt-simple": "^0.5.5",
-    "mongoose": "^5.2.17",
-    "morgan": "^1.9.1",
-    "nodemailer": "^4.6.8",
-    "passport": "^0.4.0",
-    "passport-jwt": "^4.0.0",
-    "passport-local": "^1.0.0"
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "1.18.3",
+    "compression": "1.7.3",
+    "dotenv": "6.1.0",
+    "express": "4.16.3",
+    "jwt-simple": "0.5.5",
+    "mongoose": "5.2.17",
+    "morgan": "1.9.1",
+    "nodemailer": "4.6.8",
+    "passport": "0.4.0",
+    "passport-jwt": "4.0.0",
+    "passport-local": "1.0.0"
   },
   "devDependencies": {
-    "concurrently": "^4.0.1",
-    "nodemon": "^1.18.4"
+    "concurrently": "4.0.1",
+    "nodemon": "1.18.4"
   }
 }
