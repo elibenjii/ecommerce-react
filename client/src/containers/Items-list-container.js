@@ -22,14 +22,8 @@ class ProductsListContainer extends Component {
     };
   };
 
-  componentDidMount = async() => {
-    try {
-      this.props.fetchDataApi('/api/productsdata');
-    }
-    catch(error) {
-      console.log(error);
-    };
-  };
+  componentDidMount = () => this.props.fetchDataApi('/api/productsdata');
+
 
   currentPageHandler = x => {
     const { currentPage } = this.state;
@@ -39,11 +33,11 @@ class ProductsListContainer extends Component {
     Number.isInteger(x) && this.setState({currentPage: x + 1}); 
   };
   
-  render = () => (<ItemsList 
-    {...this.props} 
-    {...this.state} 
-    currentPageHandler={this.currentPageHandler} 
-    />);
+  render = () => <ItemsList 
+      {...this.props} 
+      {...this.state} 
+      currentPageHandler={this.currentPageHandler} 
+    />
   
 }
 
