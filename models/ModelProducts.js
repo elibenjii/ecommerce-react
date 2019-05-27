@@ -22,7 +22,7 @@ const ProductsSchema = mongoose.Schema({
   description: String
 })
 
-const ModelProducts = mongoose.model('yeah2', ProductsSchema)
+const ModelProducts = mongoose.model('product', ProductsSchema)
 
 module.exports = ModelProducts
 
