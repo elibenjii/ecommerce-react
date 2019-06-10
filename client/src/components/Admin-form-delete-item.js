@@ -11,8 +11,12 @@ class AdminFormDeleteItem extends Component {
     };
   }
 
-  handleDelete = (id, title) => {
-    axios.post('/api/delete/item', { id, title })
+  handleDelete = id => {
+    axios.delete('/api/delete/item/', {
+    params: {
+      id
+    }
+  })
     .then(response => {
       console.log(response);
       this.setState({ modalEdit: !this.state.modalEdit });
