@@ -22,7 +22,7 @@ router.get('/productsdata/:id', (req, res)=> {
     .catch(err => next(err))
 })
 
-router.post('/update/item', (req, res, next)=> {
+router.put('/update/item', (req, res, next)=> {
   const { id, title, price, color, size, tags, images, description } = req.body
   ModelProducts.findById(id, (err, model) => {
     if (err) return handleError(err);
@@ -96,8 +96,8 @@ router.get('/orders', (req, res)=> {
 })
 
 
-router.post('/delete/item', (req, res, next)=> {
-  const { id, title } = req.body
+router.delete('/delete/item/:id', (req, res, next)=> {
+  const { id } = req.params
   ModelProducts.findByIdAndRemove(id, (err, model) => {
     if (err) return handleError(err);
     res.send('item: '+id+' deleted');
@@ -106,8 +106,7 @@ router.post('/delete/item', (req, res, next)=> {
     const logDelete = new ModelLog({ 
       type: 'Delete',
       time: new Date(),
-      itemid: id,
-      itemtitle: title
+      itemid: id
     });
     logDelete.save(function(err, logSaved){
       if(err){return next(err);}
