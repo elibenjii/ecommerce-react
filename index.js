@@ -11,7 +11,7 @@ const config = require('../config.js');
 
 const env = process.env.NODE_ENV || 'development';
 
-mongoose.connect(env === 'development' ? config.DB_URI_DEV : config.DB_URI, {useNewUrlParser: true, useCreateIndex: true})
+mongoose.connect(env === 'development' ? config.DB_URI_DEV : config.DB_URI, {useUnifiedTopology: true, useNewUrlParser: true})
 
 const app = express()
 app.use(compression())
