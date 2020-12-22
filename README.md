@@ -1,4 +1,3 @@
-Loger - An amazing project
 # React/Node.js template (MERN stack) ecommerce (light bundle: 100ko).
 
 ## Demo
