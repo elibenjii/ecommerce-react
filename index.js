@@ -1,4 +1,5 @@
-
+import React from 'react';
+import index from 'config.js'
 const express = require('express')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
