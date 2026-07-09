@@ -17,7 +17,7 @@
     "dotenv": "6.1.0",
     "express": "4.19.2",
     "jwt-simple": "0.5.5",
-    "mongoose": "5.13.20",
+    "mongoose": "8.8.3",
     "morgan": "1.9.1",
     "nodemailer": "6.9.9",
     "passport": "0.4.0",
